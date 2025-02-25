@@ -1,5 +1,5 @@
 # CubeSat Vision-Based Localization
-
+![](/results/demo.gif)
 ## Overview
 This repository contains the code and resources for the research project on **position estimation of CubeSats using monocular vision and YOLOv8**. The project explores computer vision techniques for detecting and localizing CubeSats in space using a single camera, leveraging deep learning for object detection and pose estimation.
 
@@ -62,10 +62,10 @@ python scripts/trainYolov8n.py
 Below are visualizations of the model’s performance in terms of detection accuracy and localization error:
 
 ### **Detection Performance**
-![Cubesat detected in 2 scenarios](https://drive.google.com/file/d/1_5OJC3oxr_qYgtmT6hjIPgYmm_Aa5G9x/view)
+![Cubesat detected in 2 scenarios](/results/demoDetect.gif)
 
 ### **Localization Performance**
-![Cubesat localisation in many positions](/results/demo.gif)
+![Cubesat localisation in many positions](/results/E1_teste.mp4)
 
 ## Citation
 If you use this project in your research, please cite the authors:
