@@ -65,7 +65,7 @@ Below are visualizations of the model’s performance in terms of detection accu
 ![Cubesat detected in 2 scenarios](https://drive.google.com/file/d/1_5OJC3oxr_qYgtmT6hjIPgYmm_Aa5G9x/view)
 
 ### **Localization Performance**
-![Cubesat localisation in many positions](https://drive.google.com/file/d/1k5oD4RdfnxMjDbPXgkOfk-HoQOSB2oL2/view?usp=sharing)
+![Cubesat localisation in many positions](/results/demo.gif)
 
 ## Citation
 If you use this project in your research, please cite the authors:
