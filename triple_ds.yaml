@@ -1,0 +1,9 @@
+path: '/content/gdrive/MyDrive/Artigo_SBC/scripts/triple_dataset/'
+train: 'train'
+val: 'valid'
+test: 'test'
+ 
+# class names
+nc: 1
+names: 
+  0: ['Cubesat']
