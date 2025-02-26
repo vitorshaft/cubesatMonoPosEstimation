@@ -1,5 +1,9 @@
 # CubeSat Vision-Based Localization
-![](/results/demo.gif)
+<div style="display: inline_block"><br>
+    <img src="scripts/media/demo.gif" alt="Projeto 1"  width="40%">
+    <img src="scripts/media/localization.gif" alt="Projeto 2"  width="40%">
+</div>
+
 ## Overview
 This repository contains the code and resources for the research project on **position estimation of CubeSats using monocular vision and YOLOv8**. The project explores computer vision techniques for detecting and localizing CubeSats in space using a single camera, leveraging deep learning for object detection and pose estimation.
 
@@ -16,8 +20,9 @@ cubesat-vision-estimation/
 │── data/                     # Dataset used for training and evaluation
 │── models/                   # Trained YOLOv8 models
 │── src/                      # Source code
-│   ├── medirDistYoloCV2.py   # CubeSat detection script
-│   ├── pecmcv_SBC.py         # Position estimation script
+│   ├── detect.py             # CubeSat detection script
+│   ├── main.py               # Position estimation script MP4 video file
+│   ├── pecmcv_SBC.py         # Position estimation script using USB camera
 │   ├── calibraCamera.py      # Camera calibration tool
 │   ├── trainYolov8n.py       # YOLOv8 training pipeline
 │── results/                  # Performance results and experiment logs
@@ -30,7 +35,7 @@ cubesat-vision-estimation/
 ### Prerequisites
 To run this project, ensure you have the following dependencies installed:
 ```
-python>=3.8
+python>=3.9
 torch
 ultralytics
 opencv-python
@@ -59,13 +64,13 @@ python scripts/trainYolov8n.py
 ```
 
 ## Results and Performance
-Below are visualizations of the model’s performance in terms of detection accuracy and localization error:
+Below are visualizations of the model’s performance in terms of detection accuracy and labelling:
 
-### **Detection Performance**
-![Cubesat detected in 2 scenarios](/results/demoDetect.gif)
+### **Trainning Performance**
+![Cubesat detected in 2 scenarios](/results/results.png)
 
-### **Localization Performance**
-![Cubesat localisation in many positions](/results/E1_teste.mp4)
+### **Labelling Validation**
+![Cubesat localisation in many positions](/results/val_batch2_pred.jpg)
 
 ## Citation
 If you use this project in your research, please cite the authors:

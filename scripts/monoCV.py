@@ -10,7 +10,7 @@ dir_atual = os.path.dirname(os.path.abspath(__file__))
 
 onnx = "monoCVnano250e.onnx"
 
-model = YOLO(onnx, task = "detect")
+model = YOLO(os.path.join(dir_atual, onnx), task = "detect")
 
 #Matriz da câmera:
 mat = [[1.14637048e+03, 0.00000000e+00, 9.08576457e+02],
@@ -18,6 +18,8 @@ mat = [[1.14637048e+03, 0.00000000e+00, 9.08576457e+02],
  [0.00000000e+00, 0.00000000e+00, 1.00000000e+00]]
 #Coeficientes de distorção:
 dist = [[ 0.08493417, -0.22591628,  0.00156742, -0.00557683,  0.17277974]]
+
+resolution = [640,480]
 
 def mostrar(img):
   fig = plt.gcf()
@@ -107,13 +109,13 @@ def detectar(cap):
         # Draw a vertical line (cross) at the center
         cv2.line(frame, (int(uvwh[0]), int(uvwh[1]) - 50), (int(uvwh[0]), int(uvwh[1]) + 50), (0, 255, 0), 3)
     
-        resultado_img = cv2.resize(resultado_img,(853,480))
+        resultado_img = cv2.resize(resultado_img,(resolution[0],resolution[1]))
         mostrar(resultado_img)
         #cv2.imshow("Detector",resultado_img)
         
         return(resultado_img,xyLH)
     except:
-        cam_resize = cv2.resize(frame,(853,480))
+        cam_resize = cv2.resize(frame,(resolution[0],resolution[1]))
         cv2.imshow("Detector",cam_resize)
         return(cam_resize,None)
         pass
