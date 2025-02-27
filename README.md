@@ -16,7 +16,7 @@ This repository contains the code and resources for the research project on **po
 
 ## Repository Structure
 ```
-cubesat-vision-estimation/
+cubesatMonoPosEstimation/
 │── data/                     # Dataset used for training and evaluation
 │── models/                   # Trained YOLOv8 models
 │── src/                      # Source code
